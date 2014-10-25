@@ -1,0 +1,9 @@
+//Module to write to IF_ID
+
+module writeIF_ID(
+	input wire [31:0] dataout,
+	output reg [31:0] instruction);
+	
+	assign instruction[31:0] = dataout[31:0];
+	
+endmodule

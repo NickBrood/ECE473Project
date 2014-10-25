@@ -1,0 +1,17 @@
+//Module to write ID_EX
+
+module writeID_EX(
+	input wire [31:0] data_out1,
+	input wire [31:0] data_out2,
+	input wire [4:0] rd,
+	output reg [31:0] exec_data_1,
+	output reg [31:0] exec_data_2,
+	output reg [4:0] exec_rd);
+	
+	assign data_out1[31:0] = exec_data_1[31:0];
+	assign data_out2[31:0] = exec_data_2[31:0];
+	assign rd[31:0] = exec_rd[31:0];
+	
+endmodule
+
+	
