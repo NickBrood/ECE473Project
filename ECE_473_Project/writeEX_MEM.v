@@ -1,6 +1,7 @@
 //Module to write EX_MEM
 
 module writeEX_MEM(
+	input wire reset,
 	input wire [31:0] ex_data_1,
 	input wire [31:0] ex_data_2,
 	input wire [4:0] rd_ex,
@@ -11,10 +12,17 @@ module writeEX_MEM(
 	output reg [31:0] save_mem);
 	
 	always @(posedge clock) begin
-		save_mem[31:0] = ex_data_2[31:0];
-		data_in[31:0] <= ex_data_1[31:0];
-		mem_addr[31:0] <= ex_data_2[31:0];
-		rd_mem[4:0] <= rd_ex[4:0];
+		if(!reset)begin
+			save_mem[31:0] = 32'b0;
+			data_in[31:0] <= 32'b0;
+			mem_addr[31:0] <= 32'b0;
+			rd_mem[4:0] <= 5'b0;
+		end else begin
+			save_mem[31:0] = ex_data_2[31:0];
+			data_in[31:0] <= ex_data_1[31:0];
+			mem_addr[31:0] <= ex_data_2[31:0];
+			rd_mem[4:0] <= rd_ex[4:0];
+		end
 	end
 	
 endmodule

@@ -1,6 +1,6 @@
 //Controller
 
-
+/*
 module controller(
 						input wire [5:0] opcode,
 						output reg regfile,
@@ -14,3 +14,4 @@ module controller(
 						
 						
 //Send one 8 bit output reg through the pipeline, each bit representing a different control bit. 
+*/
