@@ -2,6 +2,6 @@
 <LOG_ROOT>
 	<PROJECT NAME="Labfourwtf">
 		<CBX_INST_ENTRY INSTANCE_NAME="|regfileboard|ramlpm:comb_39|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_fdc1.tdf"/>
-		<CBX_INST_ENTRY INSTANCE_NAME="|regfileboard|romlmp:comb_44|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_2f71.tdf"/>
+		<CBX_INST_ENTRY INSTANCE_NAME="|regfileboard|romlmp:comb_44|altsyncram:altsyncram_component" CBX_FILE_NAME="altsyncram_uj71.tdf"/>
 	</PROJECT>
 </LOG_ROOT>

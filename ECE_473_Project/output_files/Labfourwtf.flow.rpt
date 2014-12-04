@@ -1,5 +1,5 @@
 Flow report for Labfourwtf
-Tue Oct 28 22:11:19 2014
+Thu Dec 04 16:58:00 2014
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,20 +40,20 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Flow Summary                                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Flow Status                        ; Successful - Tue Oct 28 22:11:15 2014           ;
+; Flow Status                        ; Successful - Thu Dec 04 16:57:56 2014           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Labfourwtf                                      ;
 ; Top-level Entity Name              ; regfileboard                                    ;
 ; Family                             ; Cyclone II                                      ;
 ; Device                             ; EP2C35F672C6                                    ;
 ; Timing Models                      ; Final                                           ;
-; Total logic elements               ; 3,050 / 33,216 ( 9 % )                          ;
-;     Total combinational functions  ; 2,718 / 33,216 ( 8 % )                          ;
-;     Dedicated logic registers      ; 1,472 / 33,216 ( 4 % )                          ;
-; Total registers                    ; 1472                                            ;
+; Total logic elements               ; 2,973 / 33,216 ( 9 % )                          ;
+;     Total combinational functions  ; 2,665 / 33,216 ( 8 % )                          ;
+;     Dedicated logic registers      ; 1,029 / 33,216 ( 3 % )                          ;
+; Total registers                    ; 1029                                            ;
 ; Total pins                         ; 126 / 475 ( 27 % )                              ;
 ; Total virtual pins                 ; 0                                               ;
-; Total memory bits                  ; 2,048 / 483,840 ( < 1 % )                       ;
+; Total memory bits                  ; 132,096 / 483,840 ( 27 % )                      ;
 ; Embedded Multiplier 9-bit elements ; 0 / 70 ( 0 % )                                  ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                                   ;
 +------------------------------------+-------------------------------------------------+
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/28/2014 22:10:22 ;
+; Start date & time ; 12/04/2014 16:56:43 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Labfourwtf          ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------+---------------+--------------+------------+
 ; Assignment Name                     ; Value                                 ; Default Value ; Entity Name  ; Section Id ;
 +-------------------------------------+---------------------------------------+---------------+--------------+------------+
-; COMPILER_SIGNATURE_ID               ; 176509002108441.141454862109228       ; --            ; --           ; --         ;
+; COMPILER_SIGNATURE_ID               ; 176509002108441.141773020209736       ; --            ; --           ; --         ;
 ; IP_TOOL_NAME                        ; RAM: 1-PORT                           ; --            ; --           ; --         ;
 ; IP_TOOL_NAME                        ; ROM: 1-PORT                           ; --            ; --           ; --         ;
 ; IP_TOOL_VERSION                     ; 13.0                                  ; --            ; --           ; --         ;
@@ -99,11 +99,11 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:00:10     ; 1.0                     ; 404 MB              ; 00:00:10                           ;
-; Fitter                    ; 00:00:37     ; 1.0                     ; 516 MB              ; 00:00:37                           ;
-; Assembler                 ; 00:00:03     ; 1.0                     ; 373 MB              ; 00:00:03                           ;
-; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 350 MB              ; 00:00:03                           ;
-; Total                     ; 00:00:53     ; --                      ; --                  ; 00:00:53                           ;
+; Analysis & Synthesis      ; 00:00:28     ; 1.0                     ; 400 MB              ; 00:00:28                           ;
+; Fitter                    ; 00:00:38     ; 1.0                     ; 515 MB              ; 00:00:39                           ;
+; Assembler                 ; 00:00:04     ; 1.0                     ; 374 MB              ; 00:00:03                           ;
+; TimeQuest Timing Analyzer ; 00:00:03     ; 1.0                     ; 353 MB              ; 00:00:03                           ;
+; Total                     ; 00:01:13     ; --                      ; --                  ; 00:01:13                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
