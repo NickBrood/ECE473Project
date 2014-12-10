@@ -1,0 +1,17 @@
+DEPTH = 4096;
+WIDTH = 32;
+ADDRESS_RADIX = HEX;
+DATA_RADIX = HEX;
+
+
+CONTENT BEGIN
+[000..FFF] : 000;
+
+
+00000		:		34010001	%ori $1, $0, 1%
+00004		:		0c100004	%jal, L%
+00008		:		00000000	%nop%
+0000c		:		34040001	%ori $4, $0, 1%
+00010		:		34030001	%ori $3, $0, 1
+
+END;

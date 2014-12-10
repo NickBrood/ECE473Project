@@ -1,0 +1,32 @@
+// This is a Verilog description for a 32 x 32 register file
+
+`timescale 1ns / 1ns
+
+module regfile32x32(
+	input wire clock,
+	input wire clock_debug,
+   input wire reset,
+   input wire WriteEnable,
+	input [4:0] read_address_1,
+	input [4:0] read_address_2,
+   input [31:0] write_data_in,
+	input [4:0] write_address,
+	input [4:0] read_address_debug,
+   output [31:0] data_out_1,
+   output [31:0] data_out_2,
+	output [31:0] data_out_debug);
+   reg [31:0] regfile [0:31];
+
+   assign data_out_1 = regfile[read_address_1];
+   assign data_out_2 = regfile[read_address_2];
+
+   always @(posedge clock) begin
+      if (reset) begin
+			for(integer i = 0; i < 32; i++) begin
+				regfile[i] <= 0;
+			end
+      end else begin
+			if (write) regfile[write_address] <= write_data_in;
+		end // else: !if(reset)
+   end
+endmodule

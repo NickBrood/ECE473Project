@@ -1,0 +1,11 @@
+//Test to blink LED
+
+module blink(
+	output LEDG[7:0]);
+	
+	LEDG[0] = 1'b1;
+	
+endmodule
+
+
+	

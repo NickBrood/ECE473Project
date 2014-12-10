@@ -1,0 +1,15 @@
+DEPTH = 4096;
+WIDTH = 32;
+ADDRESS_RADIX = HEX;
+DATA_RADIX = HEX;
+
+
+CONTENT BEGIN
+[000..FFF] : 000;
+
+00000		:		8c820000;	%lw $2, 0($4)%
+00004		:		00431020;	%add $2, $2, $3%
+00008		:		00000000;	%nop%
+0000c		:		00000000;	%nop%
+
+END;

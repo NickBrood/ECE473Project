@@ -1,0 +1,13 @@
+//file hexdigit.v
+
+module hexdigit(
+	input wire[3;0] in, 
+	output reg[6:0] out);
+	
+	always @* begin
+		if(in == 4'ho) begin
+			out = 1;
+			
+	end
+	
+endmodule

@@ -1,0 +1,11 @@
+//ALU Module
+
+module ALU(
+	input wire [31:0] d1,
+	input wire [31:0] d2,
+	output reg [31:0] outd2);
+	
+	always @(negedge clock) begin
+		outd2[31:0] <= d1[31:0] + d2[31:0];
+	end
+endmodule
