@@ -23,6 +23,7 @@ module regfileboard(
 	
 	//Initialize Variables
 	integer clock1hz;
+	integer clock100hz;
 	integer clock1khz;
 	integer clock;
 	reg rd_flag;
@@ -88,12 +89,12 @@ module regfileboard(
 
 	
 	//Call clock_div file
-	clk_div(CLOCK_50,,,,clock1khz,,,clock1hz);
+	clk_div(CLOCK_50,,,,clock1khz,clock100hz,,clock1hz);
 	
 	//Decide on manual or 1Hz clock
 	always @* begin
 		if(SW[17] == 1'b1) begin
-			clock = clock1hz;
+			clock = clock100hz;
 		end else begin
 			clock = KEY[1];
 		end
@@ -177,7 +178,7 @@ module regfileboard(
 		end else if(qrom[31:26] == 6'b000000) begin
 			// General adds / subs
 			if(qrom[5] != 0) begin
-				if(!((qrom[25:21] == rd_ex[4:0]) || (qrom[25:21] == rd_mem[4:0]) || (qrom[25:21] == rd_feed[4:0]) || (qrom[20:16] == rd_ex[4:0]) || (qrom[20:16] == rd_mem[4:0]) || (qrom[20:16] == rd_feed[4:0])) || ((qrom[25:21] == 0)	 && 	(qrom[20:16] == 0)	))begin
+				if(!((qrom[25:21] == rd_ex[4:0]) || (qrom[25:21] == rd_mem[4:0]) || (qrom[25:21] == rd_feed[4:0]) || (qrom[20:16] == rd_ex[4:0]) || (qrom[20:16] == rd_mem[4:0]) || (qrom[20:16] == rd_feed[4:0])) || ((qrom[25:21] == 0)	 && 	(qrom[20:16] == 0)) || (((qrom[25:21] == 0) || (qrom[20:16] == 0)) && (rd_feed[4:0] == 0) && (rd_ex[4:0] == 0) && (rd_mem[4:0] == 0)))begin
 					pc[31:0] = pc[31:0] + 4;
 				end
 			// Shift function code
@@ -234,18 +235,19 @@ module regfileboard(
 	
 	//Monitor rs, rt, rd
 	assign LEDG[1] = control_WB[0];
-	assign LEDG[6:2] = rd_feed[4:0];
-	assign LEDR[4:0] = rd_ex[4:0];
-	assign LEDR[9:5] = rd_mem[4:0];
-	assign LEDR[14:10] = rt[4:0];
+	assign LEDG[7:2] = opcode_ex[5:0];
+	assign LEDR[4:0] = rd_feed[4:0];
+	assign LEDR[9:5] = rd_ex[4:0];
+	assign LEDR[14:10] = rd_mem[4:0];
+	assign LEDR[15] = control_MEM[7];
 	
 	
 	//Display results on LCD
 	LCD_Display(
 	1'b1,						//reset pin (active high wtf)
 	CLOCK_50,				//clock
-	qram[31:0],		//Address
-	lcd_display_data[31:0],		//Display data (hex #)
+	lcd_display_data[31:0],		//Address
+	qram[31:0],		//Display data (hex #)
 	LCD_RS,					//	LCD_RS
 	LCD_EN,					// LCD EN
 	LCD_RW,					// LCD RW

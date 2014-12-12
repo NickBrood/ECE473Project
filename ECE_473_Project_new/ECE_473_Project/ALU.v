@@ -57,10 +57,10 @@ module ALU(
 			end else if (func == 6'b101010) begin
 				if(d1[31:0] < d2[31:0]) begin
 					outd1[31:0] <= d1[31:0];
-					outd2[31:0] <= 0;
+					outd2[31:0] <= 1;
 				end else begin
 					outd1[31:0] <= d1[31:0];
-					outd2 <= 1;
+					outd2[31:0] <= 0;
 				end
 			end else if (func == 6'b000000) begin
 				//Shift logic left (sll)
@@ -111,7 +111,7 @@ module ALU(
 			outd2[31:0] <= $unsigned(d1[31:0] + $signed(immediate[15:0]));
 		// lw
 		end else if (opcode[5:0] == 6'b100011) begin
-			outd1[31:0] <= d1[31:0];
+			outd1[31:0] <= d1[31:0] + $signed(immediate[15:0]);
 			outd2[31:0] <= d2[31:0] + $signed(immediate[15:0]);
 		// sw
 		end else if (opcode[5:0] == 6'b101011) begin

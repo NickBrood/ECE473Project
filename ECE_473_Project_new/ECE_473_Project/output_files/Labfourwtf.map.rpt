@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Labfourwtf
-Tue Dec 09 23:33:10 2014
+Thu Dec 11 17:03:18 2014
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -15,8 +15,8 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis IP Cores Summary
- 10. State Machine - |regfileboard|LCD_Display:comb_2164|next_command
- 11. State Machine - |regfileboard|LCD_Display:comb_2164|state
+ 10. State Machine - |regfileboard|LCD_Display:comb_2176|next_command
+ 11. State Machine - |regfileboard|LCD_Display:comb_2176|state
  12. User-Specified and Inferred Latches
  13. Registers Removed During Synthesis
  14. General Register Statistics
@@ -25,17 +25,17 @@ Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
  17. Source assignments for romlmp:comb_44|altsyncram:altsyncram_component|altsyncram_uj71:auto_generated
  18. Parameter Settings for User Entity Instance: ramlpm:comb_39|altsyncram:altsyncram_component
  19. Parameter Settings for User Entity Instance: romlmp:comb_44|altsyncram:altsyncram_component
- 20. Parameter Settings for User Entity Instance: LCD_Display:comb_2164
+ 20. Parameter Settings for User Entity Instance: LCD_Display:comb_2176
  21. altsyncram Parameter Settings by Entity Instance
- 22. Port Connectivity Checks: "LCD_Display:comb_2164"
- 23. Port Connectivity Checks: "hexdigit:comb_2142"
- 24. Port Connectivity Checks: "hexdigit:comb_2141"
- 25. Port Connectivity Checks: "hexdigit:comb_2140"
- 26. Port Connectivity Checks: "hexdigit:comb_2139"
- 27. Port Connectivity Checks: "hexdigit:comb_2138"
- 28. Port Connectivity Checks: "hexdigit:comb_2137"
- 29. Port Connectivity Checks: "hexdigit:comb_2136"
- 30. Port Connectivity Checks: "hexdigit:comb_2135"
+ 22. Port Connectivity Checks: "LCD_Display:comb_2176"
+ 23. Port Connectivity Checks: "hexdigit:comb_2152"
+ 24. Port Connectivity Checks: "hexdigit:comb_2151"
+ 25. Port Connectivity Checks: "hexdigit:comb_2150"
+ 26. Port Connectivity Checks: "hexdigit:comb_2149"
+ 27. Port Connectivity Checks: "hexdigit:comb_2148"
+ 28. Port Connectivity Checks: "hexdigit:comb_2147"
+ 29. Port Connectivity Checks: "hexdigit:comb_2146"
+ 30. Port Connectivity Checks: "hexdigit:comb_2145"
  31. Port Connectivity Checks: "romlmp:comb_44"
  32. Port Connectivity Checks: "writeIF_ID:comb_43"
  33. Port Connectivity Checks: "writeID_EX:comb_42"
@@ -73,15 +73,15 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Dec 09 23:33:10 2014           ;
+; Analysis & Synthesis Status        ; Successful - Thu Dec 11 17:03:18 2014           ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; Labfourwtf                                      ;
 ; Top-level Entity Name              ; regfileboard                                    ;
 ; Family                             ; Cyclone II                                      ;
-; Total logic elements               ; 5,008                                           ;
-;     Total combinational functions  ; 3,967                                           ;
-;     Dedicated logic registers      ; 1,613                                           ;
-; Total registers                    ; 1613                                            ;
+; Total logic elements               ; 5,036                                           ;
+;     Total combinational functions  ; 3,997                                           ;
+;     Dedicated logic registers      ; 1,603                                           ;
+; Total registers                    ; 1603                                            ;
 ; Total pins                         ; 126                                             ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 135,168                                         ;
@@ -213,9 +213,9 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; altram.inc                         ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altram.inc                                            ;         ;
 ; altdpram.inc                       ; yes             ; Megafunction                           ; c:/altera/13.0sp1/quartus/libraries/megafunctions/altdpram.inc                                          ;         ;
 ; db/altsyncram_7fc1.tdf             ; yes             ; Auto-Generated Megafunction            ; C:/Users/Nick/Documents/GitHub/ECE473Project/ECE_473_Project_new/ECE_473_Project/db/altsyncram_7fc1.tdf ;         ;
-; datamem.mif                        ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Nick/Documents/GitHub/ECE473Project/ECE_473_Project_new/ECE_473_Project/datamem.mif            ;         ;
+; ../datamem.mif                     ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Nick/Documents/GitHub/ECE473Project/ECE_473_Project_new/ECE_473_Project/datamem.mif            ;         ;
 ; db/altsyncram_uj71.tdf             ; yes             ; Auto-Generated Megafunction            ; C:/Users/Nick/Documents/GitHub/ECE473Project/ECE_473_Project_new/ECE_473_Project/db/altsyncram_uj71.tdf ;         ;
-; instrmem.mif                       ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Nick/Documents/GitHub/ECE473Project/ECE_473_Project_new/ECE_473_Project/instrmem.mif           ;         ;
+; ../instrmem.mif                    ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/Nick/Documents/GitHub/ECE473Project/ECE_473_Project_new/ECE_473_Project/instrmem.mif           ;         ;
 +------------------------------------+-----------------+----------------------------------------+---------------------------------------------------------------------------------------------------------+---------+
 
 
@@ -224,20 +224,20 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------+----------+
 ; Resource                                    ; Usage    ;
 +---------------------------------------------+----------+
-; Estimated Total logic elements              ; 5,008    ;
+; Estimated Total logic elements              ; 5,036    ;
 ;                                             ;          ;
-; Total combinational functions               ; 3967     ;
+; Total combinational functions               ; 3997     ;
 ; Logic element usage by number of LUT inputs ;          ;
-;     -- 4 input functions                    ; 2844     ;
-;     -- 3 input functions                    ; 663      ;
-;     -- <=2 input functions                  ; 460      ;
+;     -- 4 input functions                    ; 2898     ;
+;     -- 3 input functions                    ; 646      ;
+;     -- <=2 input functions                  ; 453      ;
 ;                                             ;          ;
 ; Logic elements by mode                      ;          ;
-;     -- normal mode                          ; 3681     ;
+;     -- normal mode                          ; 3711     ;
 ;     -- arithmetic mode                      ; 286      ;
 ;                                             ;          ;
-; Total registers                             ; 1613     ;
-;     -- Dedicated logic registers            ; 1613     ;
+; Total registers                             ; 1603     ;
+;     -- Dedicated logic registers            ; 1603     ;
 ;     -- I/O registers                        ; 0        ;
 ;                                             ;          ;
 ; I/O pins                                    ; 126      ;
@@ -245,8 +245,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ; Embedded Multiplier 9-bit elements          ; 0        ;
 ; Maximum fan-out node                        ; clock[0] ;
 ; Maximum fan-out                             ; 1513     ;
-; Total fan-out                               ; 19633    ;
-; Average fan-out                             ; 3.40     ;
+; Total fan-out                               ; 19766    ;
+; Average fan-out                             ; 3.41     ;
 +---------------------------------------------+----------+
 
 
@@ -255,18 +255,18 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------+--------------+
 ; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                         ; Library Name ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------+--------------+
-; |regfileboard                             ; 3967 (207)        ; 1613 (104)   ; 135168      ; 0            ; 0       ; 0         ; 126  ; 0            ; |regfileboard                                                                               ; work         ;
-;    |ALU:comb_41|                          ; 1081 (1081)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfileboard|ALU:comb_41                                                                   ; work         ;
-;    |LCD_Display:comb_2164|                ; 147 (147)         ; 59 (59)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfileboard|LCD_Display:comb_2164                                                         ; work         ;
-;    |clk_div:comb_3|                       ; 35 (35)           ; 41 (41)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfileboard|clk_div:comb_3                                                                ; work         ;
-;    |hexdigit:comb_2135|                   ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfileboard|hexdigit:comb_2135                                                            ; work         ;
-;    |hexdigit:comb_2136|                   ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfileboard|hexdigit:comb_2136                                                            ; work         ;
-;    |hexdigit:comb_2137|                   ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfileboard|hexdigit:comb_2137                                                            ; work         ;
-;    |hexdigit:comb_2138|                   ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfileboard|hexdigit:comb_2138                                                            ; work         ;
-;    |hexdigit:comb_2139|                   ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfileboard|hexdigit:comb_2139                                                            ; work         ;
-;    |hexdigit:comb_2140|                   ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfileboard|hexdigit:comb_2140                                                            ; work         ;
-;    |hexdigit:comb_2141|                   ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfileboard|hexdigit:comb_2141                                                            ; work         ;
-;    |hexdigit:comb_2142|                   ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfileboard|hexdigit:comb_2142                                                            ; work         ;
+; |regfileboard                             ; 3997 (203)        ; 1603 (104)   ; 135168      ; 0            ; 0       ; 0         ; 126  ; 0            ; |regfileboard                                                                               ; work         ;
+;    |ALU:comb_41|                          ; 1117 (1117)       ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfileboard|ALU:comb_41                                                                   ; work         ;
+;    |LCD_Display:comb_2176|                ; 147 (147)         ; 59 (59)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfileboard|LCD_Display:comb_2176                                                         ; work         ;
+;    |clk_div:comb_3|                       ; 27 (27)           ; 31 (31)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfileboard|clk_div:comb_3                                                                ; work         ;
+;    |hexdigit:comb_2145|                   ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfileboard|hexdigit:comb_2145                                                            ; work         ;
+;    |hexdigit:comb_2146|                   ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfileboard|hexdigit:comb_2146                                                            ; work         ;
+;    |hexdigit:comb_2147|                   ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfileboard|hexdigit:comb_2147                                                            ; work         ;
+;    |hexdigit:comb_2148|                   ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfileboard|hexdigit:comb_2148                                                            ; work         ;
+;    |hexdigit:comb_2149|                   ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfileboard|hexdigit:comb_2149                                                            ; work         ;
+;    |hexdigit:comb_2150|                   ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfileboard|hexdigit:comb_2150                                                            ; work         ;
+;    |hexdigit:comb_2151|                   ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfileboard|hexdigit:comb_2151                                                            ; work         ;
+;    |hexdigit:comb_2152|                   ; 7 (7)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfileboard|hexdigit:comb_2152                                                            ; work         ;
 ;    |ramlpm:comb_39|                       ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfileboard|ramlpm:comb_39                                                                ; work         ;
 ;       |altsyncram:altsyncram_component|   ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfileboard|ramlpm:comb_39|altsyncram:altsyncram_component                                ; work         ;
 ;          |altsyncram_7fc1:auto_generated| ; 0 (0)             ; 0 (0)        ; 4096        ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfileboard|ramlpm:comb_39|altsyncram:altsyncram_component|altsyncram_7fc1:auto_generated ; work         ;
@@ -276,7 +276,7 @@ Parallel compilation was disabled, but you have multiple processors available. E
 ;          |altsyncram_uj71:auto_generated| ; 0 (0)             ; 0 (0)        ; 131072      ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfileboard|romlmp:comb_44|altsyncram:altsyncram_component|altsyncram_uj71:auto_generated ; work         ;
 ;    |writeEX_MEM:comb_40|                  ; 46 (46)           ; 52 (52)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfileboard|writeEX_MEM:comb_40                                                           ; work         ;
 ;    |writeID_EX:comb_42|                   ; 118 (118)         ; 118 (118)    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfileboard|writeID_EX:comb_42                                                            ; work         ;
-;    |writeIF_ID:comb_43|                   ; 124 (124)         ; 64 (64)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfileboard|writeIF_ID:comb_43                                                            ; work         ;
+;    |writeIF_ID:comb_43|                   ; 130 (130)         ; 64 (64)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfileboard|writeIF_ID:comb_43                                                            ; work         ;
 ;    |writeMem_WB:comb_38|                  ; 40 (40)           ; 38 (38)      ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfileboard|writeMem_WB:comb_38                                                           ; work         ;
 +-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+------+--------------+---------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
@@ -304,7 +304,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 
 Encoding Type:  One-Hot
 +-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |regfileboard|LCD_Display:comb_2164|next_command                                                                                                                                                                                                                                                                                          ;
+; State Machine - |regfileboard|LCD_Display:comb_2176|next_command                                                                                                                                                                                                                                                                                          ;
 +----------------------------+----------------------------+--------------------------+---------------------+-------------------+---------------------+--------------------------+--------------------------+--------------------+---------------------------+-----------------------+-------------------------+-----------------------+---------------------+
 ; Name                       ; next_command.DISPLAY_CLEAR ; next_command.DISPLAY_OFF ; next_command.RESET3 ; next_command.HOLD ; next_command.RESET1 ; next_command.DROP_LCD_EN ; next_command.RETURN_HOME ; next_command.LINE2 ; next_command.Print_String ; next_command.MODE_SET ; next_command.DISPLAY_ON ; next_command.FUNC_SET ; next_command.RESET2 ;
 +----------------------------+----------------------------+--------------------------+---------------------+-------------------+---------------------+--------------------------+--------------------------+--------------------+---------------------------+-----------------------+-------------------------+-----------------------+---------------------+
@@ -326,7 +326,7 @@ Encoding Type:  One-Hot
 
 Encoding Type:  One-Hot
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |regfileboard|LCD_Display:comb_2164|state                                                                                                                                                                                               ;
+; State Machine - |regfileboard|LCD_Display:comb_2176|state                                                                                                                                                                                               ;
 +---------------------+---------------------+-------------------+--------------+--------------+------------+-------------------+-------------------+-------------+--------------------+----------------+------------------+----------------+--------------+
 ; Name                ; state.DISPLAY_CLEAR ; state.DISPLAY_OFF ; state.RESET3 ; state.RESET2 ; state.HOLD ; state.DROP_LCD_EN ; state.RETURN_HOME ; state.LINE2 ; state.Print_String ; state.MODE_SET ; state.DISPLAY_ON ; state.FUNC_SET ; state.RESET1 ;
 +---------------------+---------------------+-------------------+--------------+--------------+------------+-------------------+-------------------+-------------+--------------------+----------------+------------------+----------------+--------------+
@@ -400,15 +400,15 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +------------------------------------------------+------------------------------------------------------------+
 ; Register name                                  ; Reason for Removal                                         ;
 +------------------------------------------------+------------------------------------------------------------+
-; LCD_Display:comb_2164|LCD_RW_INT               ; Stuck at GND due to stuck port data_in                     ;
+; LCD_Display:comb_2176|LCD_RW_INT               ; Stuck at GND due to stuck port data_in                     ;
 ; writeIF_ID:comb_43|rd_feed[4]                  ; Merged with writeIF_ID:comb_43|rd[4]                       ;
 ; writeIF_ID:comb_43|rd_feed[3]                  ; Merged with writeIF_ID:comb_43|rd[3]                       ;
 ; writeIF_ID:comb_43|rd_feed[2]                  ; Merged with writeIF_ID:comb_43|rd[2]                       ;
 ; writeIF_ID:comb_43|rd_feed[1]                  ; Merged with writeIF_ID:comb_43|rd[1]                       ;
 ; writeIF_ID:comb_43|rd_feed[0]                  ; Merged with writeIF_ID:comb_43|rd[0]                       ;
-; LCD_Display:comb_2164|next_command.HOLD        ; Merged with LCD_Display:comb_2164|next_command.DROP_LCD_EN ;
-; LCD_Display:comb_2164|next_command.RESET1      ; Merged with LCD_Display:comb_2164|next_command.DROP_LCD_EN ;
-; LCD_Display:comb_2164|next_command.DROP_LCD_EN ; Stuck at GND due to stuck port data_in                     ;
+; LCD_Display:comb_2176|next_command.HOLD        ; Merged with LCD_Display:comb_2176|next_command.DROP_LCD_EN ;
+; LCD_Display:comb_2176|next_command.RESET1      ; Merged with LCD_Display:comb_2176|next_command.DROP_LCD_EN ;
+; LCD_Display:comb_2176|next_command.DROP_LCD_EN ; Stuck at GND due to stuck port data_in                     ;
 ; Total Number of Removed Registers = 9          ;                                                            ;
 +------------------------------------------------+------------------------------------------------------------+
 
@@ -418,7 +418,7 @@ Note: All latches listed above may not be present at the end of synthesis due to
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1613  ;
+; Total registers                              ; 1603  ;
 ; Number of registers using Synchronous Clear  ; 99    ;
 ; Number of registers using Synchronous Load   ; 58    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -434,67 +434,67 @@ Note: All latches listed above may not be present at the end of synthesis due to
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                            ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
 ; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |regfileboard|lcd_display_address[5]                  ;
-; 4:1                ; 37 bits   ; 74 LEs        ; 74 LEs               ; 0 LEs                  ; Yes        ; |regfileboard|q[19]                                   ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |regfileboard|writeMem_WB:comb_38|rd_WB[0]            ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |regfileboard|writeMem_WB:comb_38|d2_WB[7]            ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[31][2]     ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[30][13]    ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[29][28]    ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[28][8]     ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[27][29]    ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[26][20]    ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[25][19]    ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[24][9]     ;
+; 4:1                ; 37 bits   ; 74 LEs        ; 74 LEs               ; 0 LEs                  ; Yes        ; |regfileboard|q[10]                                   ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 10 LEs               ; 0 LEs                  ; Yes        ; |regfileboard|writeMem_WB:comb_38|rd_WB[1]            ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |regfileboard|writeMem_WB:comb_38|d2_WB[12]           ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[31][21]    ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[30][1]     ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[29][1]     ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[28][1]     ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[27][5]     ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[26][13]    ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[25][3]     ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[24][1]     ;
 ; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[23][1]     ;
 ; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[22][1]     ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[21][25]    ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[20][22]    ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[19][10]    ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[18][25]    ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[17][14]    ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[16][6]     ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[15][7]     ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[14][26]    ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[13][23]    ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[12][19]    ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[11][19]    ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[10][12]    ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[9][20]     ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[8][15]     ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[7][5]      ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[6][24]     ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[5][2]      ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[4][2]      ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[3][30]     ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[2][30]     ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[1][30]     ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[0][27]     ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |regfileboard|regfile32x32:comb_37|data_out_2[19]     ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |regfileboard|regfile32x32:comb_37|data_out_debug[0]  ;
-; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |regfileboard|regfile32x32:comb_37|data_out_1[14]     ;
-; 4:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |regfileboard|writeIF_ID:comb_43|shamt[0]             ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |regfileboard|writeIF_ID:comb_43|rd[0]                ;
-; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |regfileboard|writeIF_ID:comb_43|opcode[0]            ;
-; 7:1                ; 14 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |regfileboard|writeIF_ID:comb_43|immediate[13]        ;
-; 8:1                ; 14 bits   ; 70 LEs        ; 28 LEs               ; 42 LEs                 ; Yes        ; |regfileboard|writeIF_ID:comb_43|address[6]           ;
-; 7:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |regfileboard|writeIF_ID:comb_43|immediate[14]        ;
-; 7:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |regfileboard|writeIF_ID:comb_43|rs[0]                ;
-; 16:1               ; 16 bits   ; 160 LEs       ; 32 LEs               ; 128 LEs                ; Yes        ; |regfileboard|pc[31]                                  ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[21][1]     ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[20][1]     ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[19][1]     ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[18][26]    ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[17][1]     ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[16][1]     ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[15][1]     ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[14][1]     ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[13][1]     ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[12][1]     ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[11][1]     ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[10][1]     ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[9][1]      ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[8][1]      ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[7][8]      ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[6][29]     ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[5][5]      ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[4][28]     ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[3][6]      ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[2][20]     ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[1][4]      ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |regfileboard|regfile32x32:comb_37|regfile[0][29]     ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |regfileboard|regfile32x32:comb_37|data_out_debug[1]  ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |regfileboard|regfile32x32:comb_37|data_out_1[3]      ;
+; 32:1               ; 32 bits   ; 672 LEs       ; 672 LEs              ; 0 LEs                  ; Yes        ; |regfileboard|regfile32x32:comb_37|data_out_2[31]     ;
+; 4:1                ; 11 bits   ; 22 LEs        ; 11 LEs               ; 11 LEs                 ; Yes        ; |regfileboard|writeIF_ID:comb_43|shamt[1]             ;
+; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |regfileboard|writeIF_ID:comb_43|rt[0]                ;
+; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; Yes        ; |regfileboard|writeIF_ID:comb_43|opcode[1]            ;
+; 7:1                ; 14 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |regfileboard|writeIF_ID:comb_43|immediate[4]         ;
+; 8:1                ; 14 bits   ; 70 LEs        ; 28 LEs               ; 42 LEs                 ; Yes        ; |regfileboard|writeIF_ID:comb_43|address[13]          ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |regfileboard|writeIF_ID:comb_43|immediate[15]        ;
+; 7:1                ; 5 bits    ; 20 LEs        ; 5 LEs                ; 15 LEs                 ; Yes        ; |regfileboard|writeIF_ID:comb_43|rs[4]                ;
+; 16:1               ; 16 bits   ; 160 LEs       ; 32 LEs               ; 128 LEs                ; Yes        ; |regfileboard|pc[27]                                  ;
 ; 16:1               ; 8 bits    ; 80 LEs        ; 24 LEs               ; 56 LEs                 ; Yes        ; |regfileboard|pc[14]                                  ;
-; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |regfileboard|LCD_Display:comb_2164|DATA_BUS_VALUE[4] ;
-; 3:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; No         ; |regfileboard|LCD_Display:comb_2164|state             ;
-; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |regfileboard|LCD_Display:comb_2164|next_command      ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; Yes        ; |regfileboard|LCD_Display:comb_2176|DATA_BUS_VALUE[4] ;
+; 3:1                ; 11 bits   ; 22 LEs        ; 22 LEs               ; 0 LEs                  ; No         ; |regfileboard|LCD_Display:comb_2176|state             ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; No         ; |regfileboard|LCD_Display:comb_2176|next_command      ;
 ; 3:1                ; 5 bits    ; 10 LEs        ; 5 LEs                ; 5 LEs                  ; No         ; |regfileboard|writeIF_ID:comb_43|rt                   ;
-; 5:1                ; 7 bits    ; 21 LEs        ; 7 LEs                ; 14 LEs                 ; No         ; |regfileboard|ALU:comb_41|outd1[6]                    ;
-; 32:1               ; 4 bits    ; 84 LEs        ; 72 LEs               ; 12 LEs                 ; No         ; |regfileboard|LCD_Display:comb_2164|Mux5              ;
+; 32:1               ; 4 bits    ; 84 LEs        ; 72 LEs               ; 12 LEs                 ; No         ; |regfileboard|LCD_Display:comb_2176|Mux4              ;
 ; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; No         ; |regfileboard|pc                                      ;
 ; 16:1               ; 6 bits    ; 60 LEs        ; 24 LEs               ; 36 LEs                 ; No         ; |regfileboard|pc                                      ;
-; 48:1               ; 8 bits    ; 256 LEs       ; 80 LEs               ; 176 LEs                ; No         ; |regfileboard|ALU:comb_41|outd2[14]                   ;
+; 44:1               ; 7 bits    ; 203 LEs       ; 14 LEs               ; 189 LEs                ; No         ; |regfileboard|ALU:comb_41|outd1[2]                    ;
+; 48:1               ; 8 bits    ; 256 LEs       ; 80 LEs               ; 176 LEs                ; No         ; |regfileboard|ALU:comb_41|outd2[9]                    ;
 ; 49:1               ; 7 bits    ; 224 LEs       ; 84 LEs               ; 140 LEs                ; No         ; |regfileboard|ALU:comb_41|outd2[17]                   ;
-; 49:1               ; 4 bits    ; 128 LEs       ; 44 LEs               ; 84 LEs                 ; No         ; |regfileboard|ALU:comb_41|outd2[4]                    ;
 ; 50:1               ; 4 bits    ; 132 LEs       ; 52 LEs               ; 80 LEs                 ; No         ; |regfileboard|ALU:comb_41|outd2[24]                   ;
-; 50:1               ; 2 bits    ; 66 LEs        ; 24 LEs               ; 42 LEs                 ; No         ; |regfileboard|ALU:comb_41|outd2[3]                    ;
-; 51:1               ; 2 bits    ; 68 LEs        ; 28 LEs               ; 40 LEs                 ; No         ; |regfileboard|ALU:comb_41|outd2[28]                   ;
+; 51:1               ; 2 bits    ; 68 LEs        ; 28 LEs               ; 40 LEs                 ; No         ; |regfileboard|ALU:comb_41|outd2[29]                   ;
+; 37:1               ; 3 bits    ; 72 LEs        ; 36 LEs               ; 36 LEs                 ; No         ; |regfileboard|ALU:comb_41|outd2[6]                    ;
+; 38:1               ; 2 bits    ; 50 LEs        ; 24 LEs               ; 26 LEs                 ; No         ; |regfileboard|ALU:comb_41|outd2[3]                    ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------------------------+
 
 
@@ -639,7 +639,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: LCD_Display:comb_2164 ;
+; Parameter Settings for User Entity Instance: LCD_Display:comb_2176 ;
 +-----------------+-------+------------------------------------------+
 ; Parameter Name  ; Value ; Type                                     ;
 +-----------------+-------+------------------------------------------+
@@ -681,7 +681,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +---------------------------------------------------+
-; Port Connectivity Checks: "LCD_Display:comb_2164" ;
+; Port Connectivity Checks: "LCD_Display:comb_2176" ;
 +-------+-------+----------+------------------------+
 ; Port  ; Type  ; Severity ; Details                ;
 +-------+-------+----------+------------------------+
@@ -690,7 +690,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "hexdigit:comb_2142"                                                                                                                                                   ;
+; Port Connectivity Checks: "hexdigit:comb_2152"                                                                                                                                                   ;
 +------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                                                                                                               ;
 +------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -699,7 +699,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "hexdigit:comb_2141"                                                                                                                                                   ;
+; Port Connectivity Checks: "hexdigit:comb_2151"                                                                                                                                                   ;
 +------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                                                                                                               ;
 +------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -708,7 +708,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "hexdigit:comb_2140"                                                                                                                                                   ;
+; Port Connectivity Checks: "hexdigit:comb_2150"                                                                                                                                                   ;
 +------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                                                                                                               ;
 +------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -717,7 +717,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "hexdigit:comb_2139"                                                                                                                                                   ;
+; Port Connectivity Checks: "hexdigit:comb_2149"                                                                                                                                                   ;
 +------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                                                                                                               ;
 +------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -726,7 +726,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "hexdigit:comb_2138"                                                                                                                                                   ;
+; Port Connectivity Checks: "hexdigit:comb_2148"                                                                                                                                                   ;
 +------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                                                                                                               ;
 +------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -735,7 +735,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "hexdigit:comb_2137"                                                                                                                                                   ;
+; Port Connectivity Checks: "hexdigit:comb_2147"                                                                                                                                                   ;
 +------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                                                                                                               ;
 +------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -744,7 +744,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "hexdigit:comb_2136"                                                                                                                                                   ;
+; Port Connectivity Checks: "hexdigit:comb_2146"                                                                                                                                                   ;
 +------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                                                                                                               ;
 +------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -753,7 +753,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "hexdigit:comb_2135"                                                                                                                                                   ;
+; Port Connectivity Checks: "hexdigit:comb_2145"                                                                                                                                                   ;
 +------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port ; Type   ; Severity ; Details                                                                                                                                                               ;
 +------+--------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -844,19 +844,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "clk_div:comb_3"                                                                                                                                                                 ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port         ; Type   ; Severity ; Details                                                                                                                                                                 ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; clock_1mhz   ; Output ; Info     ; Explicitly unconnected                                                                                                                                                  ;
-; clock_100khz ; Output ; Info     ; Explicitly unconnected                                                                                                                                                  ;
-; clock_10khz  ; Output ; Info     ; Explicitly unconnected                                                                                                                                                  ;
-; clock_1khz   ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (32 bits) it drives.  The 31 most-significant bit(s) in the port expression will be connected to GND. ;
-; clock_100hz  ; Output ; Info     ; Explicitly unconnected                                                                                                                                                  ;
-; clock_10hz   ; Output ; Info     ; Explicitly unconnected                                                                                                                                                  ;
-; clock_1hz    ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (32 bits) it drives.  The 31 most-significant bit(s) in the port expression will be connected to GND. ;
-+--------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "clk_div:comb_3"                                                                                                                                                                  ;
++---------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port          ; Type   ; Severity ; Details                                                                                                                                                                 ;
++---------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; clock_1mhz    ; Output ; Info     ; Explicitly unconnected                                                                                                                                                  ;
+; clock_100khz  ; Output ; Info     ; Explicitly unconnected                                                                                                                                                  ;
+; clock_10khz   ; Output ; Info     ; Explicitly unconnected                                                                                                                                                  ;
+; clock_1khz    ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (32 bits) it drives.  The 31 most-significant bit(s) in the port expression will be connected to GND. ;
+; clock_100hz   ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (32 bits) it drives.  The 31 most-significant bit(s) in the port expression will be connected to GND. ;
+; clock_10hz    ; Output ; Info     ; Explicitly unconnected                                                                                                                                                  ;
+; clock_1hz     ; Output ; Warning  ; Output or bidir port (1 bits) is smaller than the port expression (32 bits) it drives.  The 31 most-significant bit(s) in the port expression will be connected to GND. ;
+; clock_1hz[-1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                     ;
++---------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------+
@@ -864,7 +865,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:17     ;
+; Top            ; 00:00:19     ;
 +----------------+--------------+
 
 
@@ -874,7 +875,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus II 32-bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Dec 09 23:32:48 2014
+    Info: Processing started: Thu Dec 11 17:02:54 2014
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Labfourwtf -c Labfourwtf
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file /users/nick/documents/github/ece473project/ece_473_project_new/lab2/sevensegmentled/hexdigit.v
@@ -908,29 +909,28 @@ Info (12021): Found 1 design units, including 1 entities, in source file writeme
 Info (12021): Found 1 design units, including 1 entities, in source file alu.v
     Info (12023): Found entity 1: ALU
 Info (12021): Found 0 design units, including 0 entities, in source file controller1.v
-Critical Warning (10846): Verilog HDL Instantiation warning at regfileboard.v(91): instance has no name
-Critical Warning (10846): Verilog HDL Instantiation warning at regfileboard.v(106): instance has no name
-Critical Warning (10846): Verilog HDL Instantiation warning at regfileboard.v(109): instance has no name
-Critical Warning (10846): Verilog HDL Instantiation warning at regfileboard.v(117): instance has no name
-Critical Warning (10846): Verilog HDL Instantiation warning at regfileboard.v(120): instance has no name
-Critical Warning (10846): Verilog HDL Instantiation warning at regfileboard.v(122): instance has no name
-Critical Warning (10846): Verilog HDL Instantiation warning at regfileboard.v(124): instance has no name
-Critical Warning (10846): Verilog HDL Instantiation warning at regfileboard.v(126): instance has no name
-Critical Warning (10846): Verilog HDL Instantiation warning at regfileboard.v(132): instance has no name
-Critical Warning (10846): Verilog HDL Instantiation warning at regfileboard.v(222): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at regfileboard.v(92): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at regfileboard.v(107): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at regfileboard.v(110): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at regfileboard.v(118): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at regfileboard.v(121): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at regfileboard.v(123): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at regfileboard.v(125): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at regfileboard.v(127): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at regfileboard.v(133): instance has no name
 Critical Warning (10846): Verilog HDL Instantiation warning at regfileboard.v(223): instance has no name
 Critical Warning (10846): Verilog HDL Instantiation warning at regfileboard.v(224): instance has no name
 Critical Warning (10846): Verilog HDL Instantiation warning at regfileboard.v(225): instance has no name
-Critical Warning (10846): Verilog HDL Instantiation warning at regfileboard.v(228): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at regfileboard.v(226): instance has no name
 Critical Warning (10846): Verilog HDL Instantiation warning at regfileboard.v(229): instance has no name
-Critical Warning (10846): Verilog HDL Instantiation warning at regfileboard.v(232): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at regfileboard.v(230): instance has no name
 Critical Warning (10846): Verilog HDL Instantiation warning at regfileboard.v(233): instance has no name
-Critical Warning (10846): Verilog HDL Instantiation warning at regfileboard.v(252): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at regfileboard.v(234): instance has no name
+Critical Warning (10846): Verilog HDL Instantiation warning at regfileboard.v(254): instance has no name
 Info (12127): Elaborating entity "regfileboard" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at regfileboard.v(31): object "lcd_display_control" assigned a value but never read
-Warning (10646): Verilog HDL Event Control warning at regfileboard.v(142): posedge or negedge of vector "clock" depends solely on its least-significant bit
-Warning (10034): Output port "LEDG[7]" at regfileboard.v(9) has no driver
-Warning (10034): Output port "LEDR[17..15]" at regfileboard.v(10) has no driver
+Warning (10036): Verilog HDL or VHDL warning at regfileboard.v(32): object "lcd_display_control" assigned a value but never read
+Warning (10646): Verilog HDL Event Control warning at regfileboard.v(143): posedge or negedge of vector "clock" depends solely on its least-significant bit
+Warning (10034): Output port "LEDR[17..16]" at regfileboard.v(10) has no driver
 Info (12128): Elaborating entity "clk_div" for hierarchy "clk_div:comb_3"
 Info (12128): Elaborating entity "regfile32x32" for hierarchy "regfile32x32:comb_37"
 Warning (10230): Verilog HDL assignment warning at regfile.v(39): truncated value with size 32 to match size of target (16)
@@ -956,6 +956,18 @@ Info (12133): Instantiated megafunction "ramlpm:comb_39|altsyncram:altsyncram_co
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_7fc1.tdf
     Info (12023): Found entity 1: altsyncram_7fc1
 Info (12128): Elaborating entity "altsyncram_7fc1" for hierarchy "ramlpm:comb_39|altsyncram:altsyncram_component|altsyncram_7fc1:auto_generated"
+Warning (113031): 35 out of 4096 addresses are reinitialized. The latest initialized data will replace the existing data. There are 35 warnings found, and 10 warnings are reported.
+    Warning (113030): Memory Initialization File address 0 is reinitialized
+    Warning (113030): Memory Initialization File address 4 is reinitialized
+    Warning (113030): Memory Initialization File address 8 is reinitialized
+    Warning (113030): Memory Initialization File address 12 is reinitialized
+    Warning (113030): Memory Initialization File address 16 is reinitialized
+    Warning (113030): Memory Initialization File address 20 is reinitialized
+    Warning (113030): Memory Initialization File address 24 is reinitialized
+    Warning (113030): Memory Initialization File address 28 is reinitialized
+    Warning (113030): Memory Initialization File address 32 is reinitialized
+    Warning (113030): Memory Initialization File address 36 is reinitialized
+Critical Warning (127004): Memory depth (128) in the design file differs from memory depth (4096) in the Memory Initialization File "C:/Users/Nick/Documents/GitHub/ECE473Project/ECE_473_Project_new/ECE_473_Project/datamem.mif" -- truncated remaining initial content value to fit RAM
 Info (12128): Elaborating entity "writeEX_MEM" for hierarchy "writeEX_MEM:comb_40"
 Info (12128): Elaborating entity "ALU" for hierarchy "ALU:comb_41"
 Warning (10764): Verilog HDL warning at ALU.v(82): converting signed shift amount to unsigned
@@ -1047,7 +1059,18 @@ Info (12133): Instantiated megafunction "romlmp:comb_44|altsyncram:altsyncram_co
 Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_uj71.tdf
     Info (12023): Found entity 1: altsyncram_uj71
 Info (12128): Elaborating entity "altsyncram_uj71" for hierarchy "romlmp:comb_44|altsyncram:altsyncram_component|altsyncram_uj71:auto_generated"
-Info (12128): Elaborating entity "hexdigit" for hierarchy "hexdigit:comb_2135"
+Warning (113031): 35 out of 4096 addresses are reinitialized. The latest initialized data will replace the existing data. There are 35 warnings found, and 10 warnings are reported.
+    Warning (113030): Memory Initialization File address 0 is reinitialized
+    Warning (113030): Memory Initialization File address 4 is reinitialized
+    Warning (113030): Memory Initialization File address 8 is reinitialized
+    Warning (113030): Memory Initialization File address 12 is reinitialized
+    Warning (113030): Memory Initialization File address 16 is reinitialized
+    Warning (113030): Memory Initialization File address 20 is reinitialized
+    Warning (113030): Memory Initialization File address 24 is reinitialized
+    Warning (113030): Memory Initialization File address 28 is reinitialized
+    Warning (113030): Memory Initialization File address 32 is reinitialized
+    Warning (113030): Memory Initialization File address 36 is reinitialized
+Info (12128): Elaborating entity "hexdigit" for hierarchy "hexdigit:comb_2145"
 Warning (10240): Verilog HDL Always Construct warning at hexdigit.v(9): inferring latch(es) for variable "out", which holds its previous value in one or more paths through the always construct
 Info (10041): Inferred latch for "out[0]" at hexdigit.v(12)
 Info (10041): Inferred latch for "out[1]" at hexdigit.v(12)
@@ -1056,7 +1079,7 @@ Info (10041): Inferred latch for "out[3]" at hexdigit.v(12)
 Info (10041): Inferred latch for "out[4]" at hexdigit.v(12)
 Info (10041): Inferred latch for "out[5]" at hexdigit.v(12)
 Info (10041): Inferred latch for "out[6]" at hexdigit.v(12)
-Info (12128): Elaborating entity "LCD_Display" for hierarchy "LCD_Display:comb_2164"
+Info (12128): Elaborating entity "LCD_Display" for hierarchy "LCD_Display:comb_2176"
 Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "clock1khz[31]" is missing source, defaulting to GND
     Warning (12110): Net "clock1khz[30]" is missing source, defaulting to GND
@@ -1093,36 +1116,36 @@ Warning (19016): Clock multiplexers are found and protected
     Warning (19017): Found clock multiplexer clock[0]
 Warning (12241): 17 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13044): Always-enabled tri-state buffer(s) removed
-    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "LCD_Display:comb_2164|DATA_BUS[0]" to the node "LCD_DATA[0]" into a wire
-    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "LCD_Display:comb_2164|DATA_BUS[1]" to the node "LCD_DATA[1]" into a wire
-    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "LCD_Display:comb_2164|DATA_BUS[2]" to the node "LCD_DATA[2]" into a wire
-    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "LCD_Display:comb_2164|DATA_BUS[3]" to the node "LCD_DATA[3]" into a wire
-    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "LCD_Display:comb_2164|DATA_BUS[4]" to the node "LCD_DATA[4]" into a wire
-    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "LCD_Display:comb_2164|DATA_BUS[5]" to the node "LCD_DATA[5]" into a wire
-    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "LCD_Display:comb_2164|DATA_BUS[6]" to the node "LCD_DATA[6]" into a wire
-    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "LCD_Display:comb_2164|DATA_BUS[7]" to the node "LCD_DATA[7]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "LCD_Display:comb_2176|DATA_BUS[0]" to the node "LCD_DATA[0]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "LCD_Display:comb_2176|DATA_BUS[1]" to the node "LCD_DATA[1]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "LCD_Display:comb_2176|DATA_BUS[2]" to the node "LCD_DATA[2]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "LCD_Display:comb_2176|DATA_BUS[3]" to the node "LCD_DATA[3]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "LCD_Display:comb_2176|DATA_BUS[4]" to the node "LCD_DATA[4]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "LCD_Display:comb_2176|DATA_BUS[5]" to the node "LCD_DATA[5]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "LCD_Display:comb_2176|DATA_BUS[6]" to the node "LCD_DATA[6]" into a wire
+    Warning (13045): Converted the fanout from the always-enabled tri-state buffer "LCD_Display:comb_2176|DATA_BUS[7]" to the node "LCD_DATA[7]" into a wire
 Warning (13012): Latch ALU:comb_41|outd1[0] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal writeID_EX:comb_42|opcode_ex[0]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal writeID_EX:comb_42|opcode_ex[1]
 Warning (13012): Latch ALU:comb_41|outd1[1] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal writeID_EX:comb_42|opcode_ex[0]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal writeID_EX:comb_42|opcode_ex[1]
 Warning (13012): Latch ALU:comb_41|outd1[2] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal writeID_EX:comb_42|opcode_ex[0]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal writeID_EX:comb_42|opcode_ex[1]
 Warning (13012): Latch ALU:comb_41|outd1[3] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal writeID_EX:comb_42|opcode_ex[0]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal writeID_EX:comb_42|opcode_ex[1]
 Warning (13012): Latch ALU:comb_41|outd1[4] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal writeID_EX:comb_42|opcode_ex[0]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal writeID_EX:comb_42|opcode_ex[1]
 Warning (13012): Latch ALU:comb_41|outd1[5] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal writeID_EX:comb_42|opcode_ex[0]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal writeID_EX:comb_42|opcode_ex[1]
 Warning (13012): Latch ALU:comb_41|outd1[6] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal writeID_EX:comb_42|opcode_ex[0]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal writeID_EX:comb_42|opcode_ex[1]
 Warning (13012): Latch ALU:comb_41|outd2[0] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal writeID_EX:comb_42|opcode_ex[5]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal writeID_EX:comb_42|opcode_ex[2]
 Warning (13012): Latch ALU:comb_41|outd2[1] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal writeID_EX:comb_42|opcode_ex[5]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal writeID_EX:comb_42|opcode_ex[3]
 Warning (13012): Latch ALU:comb_41|outd2[2] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal writeID_EX:comb_42|opcode_ex[5]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal writeID_EX:comb_42|opcode_ex[4]
 Warning (13012): Latch ALU:comb_41|outd2[3] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal writeID_EX:comb_42|opcode_ex[5]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal writeID_EX:comb_42|opcode_ex[4]
 Warning (13012): Latch ALU:comb_41|outd2[4] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal writeID_EX:comb_42|opcode_ex[4]
 Warning (13012): Latch ALU:comb_41|outd2[5] has unsafe behavior
@@ -1130,7 +1153,7 @@ Warning (13012): Latch ALU:comb_41|outd2[5] has unsafe behavior
 Warning (13012): Latch ALU:comb_41|outd2[6] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal writeID_EX:comb_42|opcode_ex[4]
 Warning (13012): Latch ALU:comb_41|outd2[7] has unsafe behavior
-    Warning (13013): Ports D and ENA on the latch are fed by the same signal writeID_EX:comb_42|opcode_ex[4]
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal writeID_EX:comb_42|opcode_ex[5]
 Warning (13012): Latch ALU:comb_41|outd2[8] has unsafe behavior
     Warning (13013): Ports D and ENA on the latch are fed by the same signal writeID_EX:comb_42|opcode_ex[2]
 Warning (13012): Latch ALU:comb_41|outd2[9] has unsafe behavior
@@ -1182,8 +1205,6 @@ Warning (13012): Latch ALU:comb_41|outd2[31] has unsafe behavior
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "LCD_ON" is stuck at VCC
     Warning (13410): Pin "LCD_BLON" is stuck at VCC
-    Warning (13410): Pin "LEDG[7]" is stuck at GND
-    Warning (13410): Pin "LEDR[15]" is stuck at GND
     Warning (13410): Pin "LEDR[16]" is stuck at GND
     Warning (13410): Pin "LEDR[17]" is stuck at GND
     Warning (13410): Pin "HEX0[7]" is stuck at GND
@@ -1206,16 +1227,16 @@ Warning (21074): Design contains 7 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "SW[12]"
     Warning (15610): No output dependent on input pin "SW[13]"
     Warning (15610): No output dependent on input pin "SW[14]"
-Info (21057): Implemented 5238 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 5266 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 23 input pins
     Info (21059): Implemented 103 output pins
-    Info (21061): Implemented 5048 logic cells
+    Info (21061): Implemented 5076 logic cells
     Info (21064): Implemented 64 RAM segments
-Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 174 warnings
+Info: Quartus II 32-bit Analysis & Synthesis was successful. 0 errors, 194 warnings
     Info: Peak virtual memory: 412 megabytes
-    Info: Processing ended: Tue Dec 09 23:33:10 2014
-    Info: Elapsed time: 00:00:22
-    Info: Total CPU time (on all processors): 00:00:22
+    Info: Processing ended: Thu Dec 11 17:03:18 2014
+    Info: Elapsed time: 00:00:24
+    Info: Total CPU time (on all processors): 00:00:24
 
 
 +------------------------------------------+

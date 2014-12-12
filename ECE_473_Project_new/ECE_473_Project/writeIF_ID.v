@@ -24,7 +24,7 @@ module writeIF_ID(
 		controller[7:0] <= 8'b00000011;
 		
 		//Basic adds, subs, etc
-		if((!((dataout[25:21] == rd_fut_1[4:0]) || (dataout[25:21] == rd_fut_2[4:0]) || (dataout[25:21] == rd_fut_3[4:0]) || (dataout[20:16] == rd_fut_1[4:0]) || (dataout[20:16] == rd_fut_2[4:0]) ||(dataout[20:16] == rd_fut_3[4:0])) || ((dataout[25:21] == 0) && (dataout[20:16] == 0))) && (dataout[31:26] == 6'b000000)) begin
+		if((!((dataout[25:21] == rd_fut_1[4:0]) || (dataout[25:21] == rd_fut_2[4:0]) || (dataout[25:21] == rd_fut_3[4:0]) || (dataout[20:16] == rd_fut_1[4:0]) || (dataout[20:16] == rd_fut_2[4:0]) ||(dataout[20:16] == rd_fut_3[4:0])) || ((dataout[25:21] == 0) && (dataout[20:16] == 0)) || (((dataout[25:21] == 0 || dataout[20:16] == 0) && (rd_fut_1[4:0] == 0) && (rd_fut_2[4:0] == 0) && (rd_fut_3[4:0] == 0)))) && (dataout[31:26] == 6'b000000)) begin
 			if(!reset) begin
 				rs[4:0] <= 5'b0;
 				rt[4:0] <= 5'b0;
@@ -219,8 +219,8 @@ module writeIF_ID(
 				end
 				opcode[5:0] <= dataout[31:26];
 			end
-		// BEQ
-		end else if((!((dataout[25:21] == rd_fut_1[4:0]) || (dataout[25:21] == rd_fut_2[4:0]) ||(dataout[25:21] == rd_fut_3[4:0]) || (dataout[20:16] == rd_fut_1[4:0]) || (dataout[20:16] == rd_fut_2[4:0]) || (dataout[20:16] == rd_fut_3[4:0])) || ((dataout[25:21] == 0) || (dataout[20:16] == 0))) && ((dataout[31:26] == 6'b000100) || (dataout[31:26] == 6'b000101)) && (!((op_fut_1[5:0] == 6'b000101) || (op_fut_2[5:0] == 6'b000101)))) begin
+		// BEQ and BNE
+		end else if((!((dataout[25:21] == rd_fut_1[4:0]) || (dataout[25:21] == rd_fut_2[4:0]) ||(dataout[25:21] == rd_fut_3[4:0]) || (dataout[20:16] == rd_fut_1[4:0]) || (dataout[20:16] == rd_fut_2[4:0]) || (dataout[20:16] == rd_fut_3[4:0])) || (((dataout[25:21] == 0) || (dataout[20:16] == 0)) && (rd_fut_1[4:0] == 0 && rd_fut_2[4:0] == 0 && rd_fut_3[4:0] == 0))) && ((dataout[31:26] == 6'b000100) || (dataout[31:26] == 6'b000101)) && (!((op_fut_1[5:0] == 6'b000101) || (op_fut_2[5:0] == 6'b000101) || (op_fut_1[5:0] == 6'b000100) || (op_fut_2[5:0] == 6'b000100)))) begin
 			if(!reset) begin
 				rs[4:0] <= 5'b0;
 				rt[4:0] <= 5'b0;
